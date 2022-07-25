@@ -34,6 +34,7 @@ namespace FlappyBird
             this.PipeDown = new System.Windows.Forms.PictureBox();
             this.ground = new System.Windows.Forms.PictureBox();
             this.scoreLBL = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Bird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).BeginInit();
@@ -95,11 +96,21 @@ namespace FlappyBird
             this.scoreLBL.AutoSize = true;
             this.scoreLBL.BackColor = System.Drawing.Color.Yellow;
             this.scoreLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLBL.Location = new System.Drawing.Point(43, 663);
+            this.scoreLBL.Location = new System.Drawing.Point(22, 644);
             this.scoreLBL.Name = "scoreLBL";
             this.scoreLBL.Size = new System.Drawing.Size(138, 29);
             this.scoreLBL.TabIndex = 4;
             this.scoreLBL.Text = "SCORE : 0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(23, 673);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "ENTER - RESTART";
             // 
             // Form1
             // 
@@ -109,6 +120,7 @@ namespace FlappyBird
             this.BackgroundImage = global::FlappyBird.Properties.Resources.BackgroundMorning;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(434, 711);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.scoreLBL);
             this.Controls.Add(this.ground);
             this.Controls.Add(this.Bird);
@@ -138,6 +150,7 @@ namespace FlappyBird
         private System.Windows.Forms.PictureBox Bird;
         private System.Windows.Forms.PictureBox ground;
         private System.Windows.Forms.Label scoreLBL;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -36,20 +36,20 @@ namespace FlappyBird
                 PipeDown.Left = 460;
                 PipeDown.Top += 20;
                 score++;
-                
+
             }
             if (PipeUp.Left < -90)
             {
                 PipeUp.Left = 460;
                 PipeUp.Top -= 20;
                 score++;
-                
+
             }
             scoreLBL.Text = "SCORE : " + score.ToString();
-            if(Bird.Bounds.IntersectsWith(PipeDown.Bounds) ||
-                Bird.Bounds.IntersectsWith(PipeUp.Bounds) ||  
+            if (Bird.Bounds.IntersectsWith(PipeDown.Bounds) ||
+                Bird.Bounds.IntersectsWith(PipeUp.Bounds) ||
                 Bird.Bounds.IntersectsWith(ground.Bounds) ||
-                Bird.Top < Bird.Height*(-1))
+                Bird.Top < Bird.Height * (-1))
             {
                 End();
             }
@@ -62,7 +62,6 @@ namespace FlappyBird
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -70,6 +69,17 @@ namespace FlappyBird
             if (Keys.Space == e.KeyCode)
             {
                 gravity -= 35;
+            }
+            else if (Keys.Enter == e.KeyCode)
+            {
+                End();
+                timer.Start();
+                Bird.Location = new Point(27, 318);
+                score = 0;
+                gravity = 10;
+                PipeSpeed = 5;
+                PipeDown.Location = new Point(27, -459);
+                PipeUp.Location = new Point(244, 457);
             }
         }
 
