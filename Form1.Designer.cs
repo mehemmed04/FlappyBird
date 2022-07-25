@@ -35,6 +35,7 @@ namespace FlappyBird
             this.ground = new System.Windows.Forms.PictureBox();
             this.scoreLBL = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Bird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).BeginInit();
@@ -60,9 +61,9 @@ namespace FlappyBird
             this.PipeUp.BackColor = System.Drawing.Color.Transparent;
             this.PipeUp.BackgroundImage = global::FlappyBird.Properties.Resources.pipeup;
             this.PipeUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PipeUp.Location = new System.Drawing.Point(244, 457);
+            this.PipeUp.Location = new System.Drawing.Point(255, 457);
             this.PipeUp.Name = "PipeUp";
-            this.PipeUp.Size = new System.Drawing.Size(100, 646);
+            this.PipeUp.Size = new System.Drawing.Size(89, 646);
             this.PipeUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PipeUp.TabIndex = 1;
             this.PipeUp.TabStop = false;
@@ -73,9 +74,9 @@ namespace FlappyBird
             this.PipeDown.BackColor = System.Drawing.Color.Transparent;
             this.PipeDown.BackgroundImage = global::FlappyBird.Properties.Resources.pipedown;
             this.PipeDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PipeDown.Location = new System.Drawing.Point(27, -459);
+            this.PipeDown.Location = new System.Drawing.Point(40, -459);
             this.PipeDown.Name = "PipeDown";
-            this.PipeDown.Size = new System.Drawing.Size(100, 631);
+            this.PipeDown.Size = new System.Drawing.Size(87, 633);
             this.PipeDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PipeDown.TabIndex = 0;
             this.PipeDown.TabStop = false;
@@ -96,7 +97,7 @@ namespace FlappyBird
             this.scoreLBL.AutoSize = true;
             this.scoreLBL.BackColor = System.Drawing.Color.Yellow;
             this.scoreLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLBL.Location = new System.Drawing.Point(22, 644);
+            this.scoreLBL.Location = new System.Drawing.Point(12, 647);
             this.scoreLBL.Name = "scoreLBL";
             this.scoreLBL.Size = new System.Drawing.Size(138, 29);
             this.scoreLBL.TabIndex = 4;
@@ -106,11 +107,21 @@ namespace FlappyBird
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(23, 673);
+            this.label1.Location = new System.Drawing.Point(82, 689);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "ENTER - RESTART";
+            this.label1.Text = "  ENTER - RESTART  ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(252, 689);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "  SPACE - JUMP  ";
             // 
             // Form1
             // 
@@ -120,6 +131,7 @@ namespace FlappyBird
             this.BackgroundImage = global::FlappyBird.Properties.Resources.BackgroundMorning;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(434, 711);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.scoreLBL);
             this.Controls.Add(this.ground);
@@ -151,6 +163,7 @@ namespace FlappyBird
         private System.Windows.Forms.PictureBox ground;
         private System.Windows.Forms.Label scoreLBL;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
